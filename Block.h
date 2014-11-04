@@ -9,7 +9,10 @@ class Block : public cocos2d::Sprite
 {
 public:
     //ブロックの種類
-    
+    enum class BlockType
+    {
+        
+    };
     
     
 };
