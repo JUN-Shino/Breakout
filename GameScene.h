@@ -36,7 +36,6 @@ public:
 
     virtual bool init();  
     
-    // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
     virtual void onEnter(); //レイヤー表示処理
 };

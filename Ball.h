@@ -1,14 +1,10 @@
-//
-//  Ball.h
-//  Breakout
-//
-//  Created by user on 2014/11/04.
-//
-//
-
 #ifndef __Breakout__Ball__
 #define __Breakout__Ball__
 
 #include <iostream>
+#include "cocos2d.h"
 
+class Ball : public cocos2d::Sprite{
+    
+}
 #endif /* defined(__Breakout__Ball__) */
