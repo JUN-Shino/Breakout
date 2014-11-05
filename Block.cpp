@@ -30,12 +30,12 @@ Block* Block::createWithBlockSize(float width, float height, int number)
 
 bool Block::initWithBlockSize(float width, float height, int number)
 {
-    std::string fileName = NULL;
+    std::string fileName;
     int t = rand() % 4;
     switch(t){
         case 0:
             fileName = "block_blue.png";
-            setBlockColor(Brue);
+            setBlockColor(Blue);
             break;
         case 1:
             fileName = "block_green.png";
@@ -55,10 +55,10 @@ bool Block::initWithBlockSize(float width, float height, int number)
             break;
     }
     
-    if(!Sprite::initWithFile(fileName,Rect(0, 0, width, height)))
+    if(!Sprite::initWithFile(fileName))
        {
            return false;
        }
     
-    Sprite::setTag()
+    return true;
 }

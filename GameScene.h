@@ -24,11 +24,9 @@ private:
         Z_Bar,
     };
     
-    void creatBackground(); //背景の生成
-
-    Bar* _bar;
-    Ball* _ball;
-    Block* _block;
+    void createBackground(); //背景の生成
+    void createGround(); //地面の生成
+    void createBall();
     
 public:
     
@@ -38,6 +36,15 @@ public:
     
     CREATE_FUNC(GameScene);
     virtual void onEnter(); //レイヤー表示処理
+    virtual void onExit();
+    
+    virtual bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* unused_event);
+    virtual void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* unused_event);
+    virtual void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* unused_event);
+    virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* unused_event);
+    
+    //衝突イベント
+    bool onContactBegin(cocos2d::PhysicsContact& contact);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
