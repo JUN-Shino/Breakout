@@ -6,27 +6,25 @@
 
 
 
-enum class BlockColor
+enum eBlockColor
 {
     Blue = 0,
-    green,
+    Green,
     Yellow,
     White,
 };
 
 class Block : public cocos2d::Sprite
 {
-protected:
-    //ブロックの番号をあらわす変数&アクセサ
-    CC_SYNTHSIZE(int,m_number, Number);
-    //ブロックの色をあらわす
-    CC_SYNTHSIZE(BlockColor,m_color, BlockColor);
+    
 public:
+    CC_SYNTHSIZE(int,m_number, Number);
+    CC_SYNTHSIZE(eBlockColor,m_color, BlockColor);
     
-    BlockSprite();
-    virtual ~BlockSprite();
+    Block();
+    virtual ~Block();
     
-    static BlockSprite* createWithBlockSize(float width, float height, int number);
+    static Block* createWithBlockSize(float width, float height, int number);
     virtual bool initWithBlockSize(float width, float height, int number);
     
 };
