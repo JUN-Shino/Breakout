@@ -26,7 +26,7 @@ private:
     
     void createBackground(); //背景の生成
     void createGround(); //地面の生成
-    void createBall();
+    void createBar();
     
 public:
     

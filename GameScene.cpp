@@ -45,7 +45,7 @@ void GameScene::onEnter()
     createBackground();
     
     //地面の生成
-    createGround();
+    createBar();
     
 }
 
@@ -54,12 +54,15 @@ void GameScene::createBackground()
     auto background = Sprite::create("background.png");
     background->setAnchorPoint(Point(0,0.5));
     background->setPosition(Point(0,WINSIZE.height / 2));
-    addChild(background,Z_Background,T_Background);
+    addChild(background, Z_Background, T_Background);
 }
 
-void GameScene::createGround()
+void GameScene::createBar()
 {
-    auto background = getChildByTag(T_Background);
+
+    
+    //物質的特徴の設定
+    PhysicsMaterial material;
     
     
 }
